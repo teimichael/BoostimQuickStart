@@ -1,0 +1,62 @@
+version: '3'
+services:
+  web-auth:
+    container_name: boostimauth
+    build:
+      context: .
+      dockerfile: web-auth-dockerfile
+    working_dir: /web
+    ports:
+      - 9000:9000
+    depends_on:
+      - mysql-auth
+    command: mvn clean spring-boot:run -Dspring-boot.run.profiles=prod
+
+  mysql-auth:
+    container_name: boostimauth-mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: boostimauth
+      MYSQL_ROOT_PASSWORD: boostim#auth
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - 9001:3306
+    restart: always
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  web-center:
+    container_name: boostimcenter
+    build:
+      context: .
+      dockerfile: web-center-dockerfile
+    working_dir: /web
+    ports:
+      - 9510:9510
+    depends_on:
+      - mysql-data
+    command: mvn clean spring-boot:run -Dspring-boot.run.profiles=prod
+
+  web-node:
+    container_name: boostimnode
+    build:
+      context: .
+      dockerfile: web-node-dockerfile
+    working_dir: /web
+    ports:
+      - 9511:9511
+    depends_on:
+      - mysql-data
+    command: mvn clean spring-boot:run -Dspring-boot.run.profiles=prod
+
+  mysql-data:
+    container_name: boostimdata-mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: boostimdata
+      MYSQL_ROOT_PASSWORD: boostim#data
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - 8081:3306
+    restart: always
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
