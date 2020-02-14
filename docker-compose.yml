@@ -1,6 +1,6 @@
 version: '3'
 services:
-  web-auth:
+  web-boostimauth:
     container_name: boostimauth
     build:
       context: .
@@ -9,10 +9,10 @@ services:
     ports:
       - 9000:9000
     depends_on:
-      - mysql-auth
+      - mysql-boostimauth
     command: mvn clean spring-boot:run -Dspring-boot.run.profiles=prod
 
-  mysql-auth:
+  mysql-boostimauth:
     container_name: boostimauth-mysql
     image: mysql:8.0
     environment:
@@ -24,7 +24,7 @@ services:
     restart: always
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
 
-  web-center:
+  web-boostimcenter:
     container_name: boostimcenter
     build:
       context: .
@@ -33,10 +33,10 @@ services:
     ports:
       - 9510:9510
     depends_on:
-      - mysql-data
+      - mysql-boostimdata
     command: mvn clean spring-boot:run -Dspring-boot.run.profiles=prod
 
-  web-node:
+  web-boostimnode:
     container_name: boostimnode
     build:
       context: .
@@ -45,10 +45,10 @@ services:
     ports:
       - 9511:9511
     depends_on:
-      - mysql-data
+      - mysql-boostimdata
     command: mvn clean spring-boot:run -Dspring-boot.run.profiles=prod
 
-  mysql-data:
+  mysql-boostimdata:
     container_name: boostimdata-mysql
     image: mysql:8.0
     environment:
