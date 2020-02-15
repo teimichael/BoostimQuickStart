@@ -1,6 +1,13 @@
 # BoostimQuickStart
 A QuickStart project for Boostim.
 
+## Port
+- BoostimAuth: 9500
+- BoostimAuthMySQL: 9501
+- BoostimCenter: 9510
+- BoostimNode: 9511
+- BoostimDataMySQL: 9600
+
 ## Command
 ### Pull projects from GitHub
 ```bash
