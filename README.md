@@ -9,6 +9,12 @@ A QuickStart project for Boostim.
 - BoostimDataMySQL: 9600
 
 ## Command
+### Pull third containers
+```bash
+chmod u+x ./pull3rdContainers.sh
+./pull3rdContainers.sh
+```
+
 ### Pull projects from GitHub
 ```bash
 chmod u+x ./cloneRepositories.sh
