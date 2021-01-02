@@ -3,11 +3,8 @@ A QuickStart project for Boostim. \
 Boostim is a set of solutions for instant messaging. \
 This project encapsulates related components into containers and implements one-click deployment.
 
-## Related Repositories
-- [BoostimCenter](https://github.com/teimichael/BoostimCenter): center node (controller)
-- [BoostimNode](https://github.com/teimichael/BoostimNode): common node (worker)
-- [BoostimAuth](https://github.com/teimichael/BoostimAuth): authentication system
-- [BoostimWebClient](https://github.com/teimichael/BoostimWebClient): easy-integration web client
+## Architecture
+![Boostim Design Architecture](./figure/Architecture.png)
 
 ## Port
 - BoostimAuth: 9500
@@ -48,3 +45,9 @@ docker-compose down
 ```bash
 docker-compose down --rmi 'all'
 ```
+
+## Related Repositories
+- [BoostimCenter](https://github.com/teimichael/BoostimCenter): center node (controller)
+- [BoostimNode](https://github.com/teimichael/BoostimNode): common node (worker)
+- [BoostimAuth](https://github.com/teimichael/BoostimAuth): authentication system
+- [BoostimWebClient](https://github.com/teimichael/BoostimWebClient): easy-integration web client
