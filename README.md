@@ -1,11 +1,12 @@
 # BoostimQuickStart
-A QuickStart project for Boostim.
+A QuickStart project for Boostim. \
+Boostim is a set of solutions for instant messaging.
 
 ## Related Repositories
-- [BoostimCenter](https://github.com/teimichael/BoostimCenter)
-- [BoostimNode](https://github.com/teimichael/BoostimNode)
-- [BoostimAuth](https://github.com/teimichael/BoostimAuth)
-- [BoostimWebClient](https://github.com/teimichael/BoostimWebClient)
+- [BoostimCenter](https://github.com/teimichael/BoostimCenter): center node (controller)
+- [BoostimNode](https://github.com/teimichael/BoostimNode): common node (worker)
+- [BoostimAuth](https://github.com/teimichael/BoostimAuth): authentication system
+- [BoostimWebClient](https://github.com/teimichael/BoostimWebClient): easy-integration web client
 
 ## Port
 - BoostimAuth: 9500
