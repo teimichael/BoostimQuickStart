@@ -1,6 +1,7 @@
 # BoostimQuickStart
 A QuickStart project for Boostim. \
-Boostim is a set of solutions for instant messaging.
+Boostim is a set of solutions for instant messaging. \
+This project encapsulates related components into containers and implements one-click deployment.
 
 ## Related Repositories
 - [BoostimCenter](https://github.com/teimichael/BoostimCenter): center node (controller)
