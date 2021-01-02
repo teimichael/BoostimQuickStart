@@ -1,6 +1,12 @@
 # BoostimQuickStart
 A QuickStart project for Boostim.
 
+## Related Repositories
+- [BoostimCenter](https://github.com/teimichael/BoostimCenter)
+- [BoostimNode](https://github.com/teimichael/BoostimNode)
+- [BoostimAuth](https://github.com/teimichael/BoostimAuth)
+- [BoostimWebClient](https://github.com/teimichael/BoostimWebClient)
+
 ## Port
 - BoostimAuth: 9500
 - BoostimAuthMySQL: 9501
